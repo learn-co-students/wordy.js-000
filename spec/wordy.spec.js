@@ -72,11 +72,12 @@ describe('Word Problem', function() {
     expect(new WordProblem(question).answer()).toEqual(2);
   });
 
-  xit('too advanced', function() {
+  it('too advanced', function() {
     var question = 'What is 53 cubed?';
     var problem  = new WordProblem(question);
 
-    expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
+    expect(new WordProblem(question).answer()).toEqual(148877);
+    //expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
   });
 
   xit('irrelevant', function() {
